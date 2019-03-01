@@ -1,7 +1,5 @@
 FROM        busybox:latest
 
-RUN
-
 COPY prometheus                             /bin/prometheus
 COPY promtool                               /bin/promtool
 COPY prometheus.yml                         /etc/prometheus/prometheus.yml
