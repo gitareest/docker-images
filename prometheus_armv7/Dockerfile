@@ -12,5 +12,6 @@ EXPOSE     9090
 VOLUME     [ "/prometheus" ]
 WORKDIR    /prometheus
 ENTRYPOINT [ "/bin/prometheus" ]
-CMD        [ "--web.console.libraries=/etc/prometheus/console_libraries", \
+CMD        [ "--config.file=/etc/prometheus/prometheus.yml", \
+             "--web.console.libraries=/etc/prometheus/console_libraries", \
              "--web.console.templates=/etc/prometheus/consoles" ]
